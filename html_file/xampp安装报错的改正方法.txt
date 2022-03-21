@@ -1,0 +1,13 @@
+暂时用不上
+
+cp -rp ~/.bitnami ~/.bitnami.back
+
+cd ../../tmp
+
+curl -LJO "http://downloads.bitnami.com/files/hyperkit/hyperkit-testing-20210430"
+
+md5 /tmp/hyperkit-testing-20210430
+
+mv /tmp/hyperkit-testing-20210430 ~/.bitnami/stackman/helpers/hyperkit
+
+chmod +x ~/.bitnami/stackman/helpers/hyperkit
