@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第十七节：网页编排格式</title>
+</head>
+
+<body>
+    <!-- 在body中首先创建头部header，然后是内容主题article，最后是底部footer -->
+    <header>
+        <!-- h1创建标题名 -->
+        <h1>网页标题</h1> 
+        <!-- 然后可能有导航的网址 -->
+        <nav>
+            <ul>
+                <li><a href="#">导航网址1</a></li>
+                <li><a href="#">导航网址2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+        <!-- 正文部分可能有多种类型标题，所以可以使用hgroup -->
+        <hgroup>
+            <h1>主标题</h1>
+            <h2>子标题</h2>
+        </hgroup>
+        <!-- 正文用p元素承载 -->
+        <p>这是正文部分</p>
+        <!-- 比如评论，可以用section元素 -->
+        <section>
+            <div>
+                <article>
+                    <h1>这是评论的标题</h1>
+                    <p>评论的详细内容在这里</p>
+                </article>
+            </div>
+        </section>
+    </article>
+
+    <footer>
+        <small>版权所有</small>
+    </footer>
+
+</body>
+
+</html>
