@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第二十节:control属性 & palceholder属性</title>
+</head>
+
+<body>
+    <!-- control属性 -->
+    <!-- 效果是网页中，点击“设置默认值”就会自动填充001000 -->
+    <script>
+        function setValue(){
+            var label = document.getElementById("label");
+            var textbook = label.control;
+            textbook.value = "001000"
+        }
+    </script>
+
+    <form>
+        <label id="label">
+            邮编
+            <input id="input_id" maxlength="6">
+            <small>请输入六位数字</small>
+        </label>
+        <input type="button" value="设置默认值" onclick="setValue()">
+    </form>
+    <br/>
+
+    <!-- palceholder属性 -->
+    <!-- 在你输入姓名的时候，“请输入姓名”这行字就没有了 -->
+    <input type="text" placeholder="请输入姓名">
+
+
+</body>
+
+</html>

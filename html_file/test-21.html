@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第二十一节:list属性</title>
+</head>
+
+<body>
+    <!-- list属性 -->
+    <!-- 呈现出来的效果就是，可以下拉选择，也可以自己输入 -->
+    <form>
+        <input type="text" name="study" list="studying">
+        <datalist id="studying" style="display: none;">
+            <option value="高数">高数</option>
+            <option value="现代">现代</option>
+            <option value="微积分">微积分</option>
+        </datalist>
+    </form>
+    <br/>
+    
+    <!-- autocomplete属性 -->
+    <!-- 据说得和js配合才有效果 -->
+    <input type="text" name="study" autocomplete="on" list="studying">
+
+
+</body>
+
+</html>

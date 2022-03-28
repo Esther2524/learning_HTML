@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第十九节:labels属性</title>
+</head>
+
+<body>
+    <!-- labels属性 -->
+    <!-- 这样做的效果就是，如果网页的文本框中什么都不填写，然后提交的话，就会出现提示“请输入姓名 -->
+    <script>
+        function Validate(){
+            var txtName = document.getElementById("txt_name");
+            var button = document.getElementById("btnValidate");
+            var form = document.getElementById("testform");
+            if(txtName.value.trim()==""){
+                var label = document.createElement("label");
+                label.setAttribute("for","txt_name");
+                form.insertBefore(label,button);
+                txtName.labels[1].innerHTML = "请输入姓名";
+                txtName.labels[1].setAttribute("style","font-size:9px;color:red;");
+            }
+        }
+    </script>
+    <form id="testform">
+        <label id="label" for="txt_name">姓名</label>
+        <input id="txt_name">
+        <input type="button" id="btnValidate" value="验证" onclick="Validate()">
+
+</body>
+</html>
