@@ -1,0 +1,19 @@
+li strong{
+    color: blue;
+}
+
+strong{
+    color: rgb(47, 170, 129);
+}
+
+#test{
+    color: brown;
+}
+
+#test a{
+    color: rgb(100, 199, 75);
+}
+
+#div_id{
+    color: coral;
+}

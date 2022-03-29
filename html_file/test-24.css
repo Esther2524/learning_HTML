@@ -1,0 +1,12 @@
+h1,h2,a{
+    /* 多个属性之间用分号隔开 */
+    color: rgb(75, 180, 145);font-size: 32px;
+}
+
+body{
+    color: rgb(218, 83, 105);
+}
+
+p{
+    color: blue;
+}

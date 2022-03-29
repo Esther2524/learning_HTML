@@ -6,9 +6,13 @@
 </head>
 
 <body>
-    <form>
+    <!-- 这样如果输入数字或者小写等不符合规则的，就无法提交 -->
+    <form action="http://localhost/for_test18.php">
         请输入内容
+        <input pattern="[A-Z]{3}" name="part">
+        <input type="submit">
     </form>
+    <br/>
 
 </body>
 
