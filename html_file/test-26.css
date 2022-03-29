@@ -1,0 +1,16 @@
+.pclass{
+    color: blue;
+}
+
+.div_class{
+    color: rgb(138, 105, 172);
+}
+
+/* 派生选择器 */
+.pclass a{
+    color: rgb(223, 46, 128);
+}
+
+.div_class p{
+    color: rgb(44, 175, 77);
+}
