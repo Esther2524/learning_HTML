@@ -1,0 +1,26 @@
+h1{
+    color: rgb(43, 128, 226);
+    text-align: center;
+}
+
+p{
+    /* 文本大小 */
+    font-size: 20px;
+    /* 字体 */
+    font-family: Georgia;
+    /* 文字颜色 */
+    color: brown;
+    /* 文字对齐方式 */
+    text-align: left;
+    /* 首行锁进 */
+    text-indent: 2em;
+    /* 进行大小写的转换 */
+    /* text-transform: uppercase;  */
+    /* 文本设置宽度并换行 */
+    width: 800px;
+    word-wrap: normal;
+}
+
+body{
+    background-color: azure;
+}

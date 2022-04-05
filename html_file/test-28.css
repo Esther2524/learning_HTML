@@ -1,0 +1,18 @@
+body{
+    /* 设置颜色 */
+    /* background-color: cadetblue; */
+    /* 设置背景图片 */
+    background-image: url("forest.jpg");
+    background-size: cover;
+    /* 使图片不随着文字滚动 */
+    background-attachment: fixed;
+
+}
+
+p{
+    /* 设置字体背景颜色的宽度 */
+    width: 120px;
+    /* 设置字体和背景框的边距 */
+    padding: 5px;
+    background-color: rgb(134, 235, 235);
+}
