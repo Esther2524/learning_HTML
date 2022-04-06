@@ -1,0 +1,21 @@
+/* 链接没有被点击的时候的颜色 */
+a:link{
+    color: blue;
+    text-decoration: none;
+}
+
+/* 已经被点击过后的颜色 */
+a:visited{
+    color: rgb(236, 63, 63);
+}
+
+/* 鼠标滑过的时候的颜色 */
+a:hover{
+    color: blue;
+}
+
+/* 正在被点击的时候的颜色 */
+a:active{
+    color: rgb(194, 77, 184);
+}
+
