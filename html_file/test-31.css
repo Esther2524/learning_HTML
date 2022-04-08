@@ -1,0 +1,6 @@
+ul li{
+    /* 列表格式 */
+    /* list-style-type: decimal; */
+    /* 图片 */
+    list-style-image: url("kirby.jpg");
+}

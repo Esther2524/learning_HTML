@@ -1,0 +1,9 @@
+#position1{
+    width: 100px;
+    height: 200px;
+    background-color: beige;
+    /* 绝对布局：会把数字给遮住 */
+    /* position: absolute; */
+    /* 页面滑动，但是div那片区域不动，一直覆盖在数字上面 */
+    position: fixed;
+}

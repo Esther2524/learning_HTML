@@ -1,0 +1,28 @@
+#use,tr,th,td{
+    /* 加上有颜色的外边框 */
+    border: 2px solid rgb(35, 125, 148) ;
+    /* 使文字在边框中居中 */
+    text-align: center;
+    /* 表格颜色 */
+    background-color: rgb(220, 245, 240);
+    /* 设置内边距 */
+    padding: 3px;
+}
+
+#use{
+    /* 折叠边框 */
+    border-collapse: collapse;
+    /* 设置边框的宽和高 */
+    width: 300px;
+    height: 200px;
+}
+
+/* 一段文字的轮廓 */
+p {
+    /* 轮廓样式 */
+    outline-style: double;
+    /* 轮廓颜色 */
+    outline-color: burlywood;
+    /* 轮廓粗细 */
+    outline-width: 3px;
+}
