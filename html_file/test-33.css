@@ -1,9 +1,24 @@
 #position1{
     width: 100px;
-    height: 200px;
-    background-color: beige;
+    height: 100px;
+    background-color: rgb(231, 148, 53);
     /* 绝对布局：会把数字给遮住 */
     /* position: absolute; */
     /* 页面滑动，但是div那片区域不动，一直覆盖在数字上面 */
-    position: fixed;
+    /* position: fixed; */
+    position: relative;
+    left: 20px;
+    top: 20px;
+    /* 覆盖顺序，决定哪个在上面，哪个在下面 */
+    z-index: 1;
+}
+
+#position2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(52, 151, 65);
+    position: relative;
+    left: 10px;
+    top: 10px;
+    z-index: 2;
 }

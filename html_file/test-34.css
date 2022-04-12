@@ -1,0 +1,32 @@
+#float1{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    float: left;
+}
+
+#float2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(146, 236, 134);
+    float: left;
+}
+
+#float3{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(223, 182, 50);
+    float: left;
+}
+
+#container{
+    width: 800px;
+    height: 600px;
+    background-color: rgb(206, 203, 194);
+    float: left;
+}
+
+/* 将文本取消浮动格式 */
+#text{
+    clear: both;
+}

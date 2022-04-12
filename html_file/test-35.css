@@ -1,0 +1,24 @@
+td{
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
+
+p{
+    border-radius: 10px;
+    width: 200px;
+    /* 边框内部填充色 */
+    background-color: rgb(113, 233, 113);
+    text-align: center;
+    /* 边框颜色 */
+    border: 2px solid rgb(21, 21, 22);
+}
+
+#test35{
+    background-color: rgb(159, 224, 159);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    box-shadow: 10px 10px 5px rgb(153, 146, 146);
+}
