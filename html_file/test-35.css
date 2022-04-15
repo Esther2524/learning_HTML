@@ -22,3 +22,14 @@ p{
     text-align: center;
     box-shadow: 10px 10px 5px rgb(153, 146, 146);
 }
+
+/* 外边距 */
+body{
+    margin: 0;
+}
+.outside{
+    background-color: cadetblue;
+    width: 200px;
+    height: 100px;
+    margin: 200px;
+}

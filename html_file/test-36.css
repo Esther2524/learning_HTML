@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+}
+.container{
+    margin: 100px;
+}
+.outside{
+    border-style: dotted;
+}
+.inside{
+    padding: 100px;
+}
+.content{
+    background-color: burlywood;
+}
+
+
+.container2{
+    margin: 100px;
+}
+.outside2{
+    border-style: dotted;
+}
+.inside2{
+    padding: 100px;
+}
+.content2{
+    background-color: burlywood;
+}
