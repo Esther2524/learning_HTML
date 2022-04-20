@@ -1,0 +1,33 @@
+ul{
+    /* 去除列表前面的点 */
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+    text-align: center;
+    background-color: rgb(241, 224, 99);
+}
+
+/* a标签中已经点击和没有点击的，都去掉下划线效果 */
+a:link, a:visited{
+    /* 文字变粗 */
+    font-weight: bold;
+    text-decoration: none;
+    /* display: block; */
+    background-color: rgb(169, 226, 186);
+    width: 50px;
+    text-align: center;
+}
+
+/* 设置把鼠标放上去的时候，颜色改变 */
+a:active, a:hover{
+        background-color: aquamarine;
+}
+
+/* 是竖着的变成一行摆放 */
+li{
+    display: inline;
+    /* 设置导航栏与导航栏之间的边距 */
+    padding-left: 8px;
+    padding-right: 8px;
+}

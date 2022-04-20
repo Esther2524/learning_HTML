@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.top{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(125, 161, 149);
+}
+
+.top_content{
+    width: 75%;
+    height: 50px;
+    /* 边距上下为0px，左右自适应 */
+    margin: 0px auto;
+    background-color: rgb(210, 240, 190);
+}
+
+.body_set{
+    /* 上下边距设为20px这样就会让头部和主体中间有间隔 */
+    margin: 20px auto;
+    width: 75%;
+    height: 1550px;
+    background-color: rgb(240, 228, 161);
+}
+
+.body_image{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(209, 188, 229);
+}
+
+.body_content{
+    width: 100%;
+    height: 1100px;
+    background-color: darkgray;
+}
+
+.body_info{
+    width: 100%;
+    height: 50px;
+    background-color: cornflowerblue;
+}
+
+.footer{
+    width: 75%;
+    height: 400px;
+    background-color: rgb(80, 76, 76);
+    margin: 0px auto;
+}
+
+.footer_content{
+    width: 100%;
+    height: 300px;
+    background-color: forestgreen;
+}
+
+.footer_nav{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(116, 150, 116);
+} 
