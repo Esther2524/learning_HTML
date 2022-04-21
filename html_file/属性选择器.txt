@@ -1,0 +1,41 @@
+在css中引用的方式不同：
+
+#id名称{
+    hello, world
+}
+
+.class名称{
+    hello, world
+}
+
+id与class的区别在于，一个html文档中只能存在一个id，但是可以存在多个class
+<div id="index1">apple<div>
+<div id="index1">banana<div> 这种写法是错误的
+<div class="figure1">apple<div>
+<div class="figure1">banana<div> 这种写法是正确的
+<div class="figure1">cream<div> 这种写法是正确的
+
+另外，id选择器不能结合使用。当使用javascript的时候需要用到id
+
+
+其他标签都是直接写
+body{
+
+}
+img{
+
+}
+a{
+
+}
+
+title选择器的使用方式是在html的head部分
+<head>
+    ...
+    <style>
+        [title]{
+            color:xxx
+        }
+    <style>
+
+<head>
