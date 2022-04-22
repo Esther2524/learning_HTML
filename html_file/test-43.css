@@ -1,0 +1,17 @@
+.container{
+    column-width: 500px;
+    -webkit-column-width: 500px;
+    column-gap: 3px;
+    -webkit-column-gap: 3px
+}
+
+.container div{
+    width: 500px;
+    margin: 2px 0;
+}
+
+/* 对文字进行修改 */
+.container p{
+    text-align: center;
+    font-size: larger;
+}

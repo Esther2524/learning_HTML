@@ -1,0 +1,65 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+    position: relative;
+    /* 定义动画名称和时间,以及是否一直执行 */
+    animation: anim_test 5s infinite alternate ;
+    -webkit-animation: anim_test 5s infinite alternate;
+}
+/* 记得在keyframes后面制定名称 */
+@keyframes anim_test{
+    0%{
+        background: rgb(141, 141, 195);
+        left:0px;
+        top:0px
+    }
+    25%{
+        background: rgb(170, 238, 170);
+        left: 200px;
+        top: 0px
+    }
+    50%{
+        background: rgb(237, 186, 85);
+        left: 200px;
+        top: 200px
+    }
+    75%{
+        background: rgb(157, 235, 239);
+        left: 0px;
+        top: 200px
+    }  
+    100%{
+        background: rgb(248, 197, 197);
+        left: 0px;
+        top: 0px
+    }
+}
+
+@-webkit-keyframes anim_test{
+    0%{
+        background: rgb(141, 141, 195);
+        left:0px;
+        top:0px
+    }
+    25%{
+        background: rgb(170, 238, 170);
+        left: 200px;
+        top: 0px
+    }
+    50%{
+        background: rgb(237, 186, 85);
+        left: 200px;
+        top: 200px
+    }
+    75%{
+        background: rgb(157, 235, 239);
+        left: 0px;
+        top: 200px
+    }  
+    100%{
+        background: rgb(248, 197, 197);
+        left: 0px;
+        top: 0px
+    }
+}
