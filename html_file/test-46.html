@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第四十六节:javascript语法</title>
+</head>
+
+<body>
+    <!-- 点击按钮，呈现结果 -->
+    <p>i=10,j=20,i+j=?</p>
+    <p id="sum_id"></p>
+    <button onclick="sum_result()">结果</button>
+    <script>
+        function sum_result(){
+            var i = 10;
+            var j = 20;
+            var m = i + j;
+            // 加+ 减- 乘* 除/ 取余数%
+            document.getElementById("sum_id").innerHTML=m;
+        }
+    </script>
+    <br/>
+
+    <!-- 自加 -->
+    <p>i=10,自己加自己的结果</p>
+    <p id="sum_id2"></p>
+    <button onclick="sum2_result()">结果</button>
+    <script>
+        function sum2_result(){
+            var i = 10;
+            var n = i++; //输出的结果是10，i++是先赋值给n(n=10)，再运算(i=i+1)。这行运行完成之后i=11
+            // 如果是 var m = ++i 那么输出的结果为11，++i先运算(i=i+1)，再赋值给n(n=11)。此行运行完成之后i=11
+            document.getElementById("sum_id2").innerHTML=n;
+        }
+    </script>
+    <br/>
+
+    <!-- 赋值运算 -->
+    <p>赋值运算结果</p>
+    <p id="cal_id"></p>
+    <button onclick="cal_result()">结果</button>
+    <script>
+        function cal_result(){
+            var i = 13;
+            var j = 5; 
+            j = i;//把i的值赋给j
+            document.getElementById("cal_id").innerHTML=j;
+        }
+    </script>
+
+</body>
+
+</html>

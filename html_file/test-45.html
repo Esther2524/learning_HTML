@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第四十五节:javascript基础</title>
+    <!-- js可以一般写在head里面，也可以写在body里面；还有一种方式就是从外部引入js文件 -->
+    <!-- js的数量没有限制 -->
+    <script>
+        document.write("hello, world");
+    </script>
+    <!-- 
+        从外部引入js文件的方式，假设有myfile.js这个文件的存在
+        <script src="myfile.js"></script>
+    -->
+</head>
+
+<body>
+    <!-- 可以在js中使用html标签 -->
+    <script>
+        document.write("<h1>标题</h1>");
+    </script>
+
+    <!-- 举例，使用js更改p标签的内容，即把Melody变为Kirby -->
+    <p id="pid">Melody</p>
+    <script>
+        document.getElementById("pid").innerHTML="Kirby";
+    </script>
+    <script>
+        document.getElementById("pid").innerHTML="Angel";
+    </script>
+    <!-- js也有执行顺序，也就是按照最后一个为准 -->
+    <script>
+        document.getElementById("pid").innerHTML="Evil";
+    </script>
+
+    <!-- js输出内容的顺序 -->
+    <script>document.write("apple");</script>
+    <script>document.write("banana");</script>
+    <script>document.write("peach");</script>
+    <script>
+        document.write("Sunday");
+        document.write("Tuesday");
+        document.write("Wednesday");
+    </script>
+    <br>
+
+    <!-- js中的变量声明 -->
+    <script>
+        var x = 10;
+        var y = "hello";
+        var z = 3;
+        var h = "world"
+        var m = x + z;
+        var p = y + h;
+        var u = true;
+        x = null; //给变量赋值null来清除变量
+
+        document.write(m); //输出数值
+        document.write(p); //输出字符串
+        document.write(u); //输出布尔值
+        document.write(x);
+    </script>
+    <br/>
+
+    <script>
+        var array_set = [1,2,3,4]; //定义数组，用方括号
+        var array2 = ["apple","banana","peach"];
+        var array3 = new Array("Tuesday","Monday","Sunday");//另外一种生成数组的方式，这里是用圆括号
+        var array4 = new Array();//第三种生成数组的方式
+        array4[0] = "good";
+        array4[1] = "excellent";
+        array4[2] = "great";
+        var n = null; //定义空
+        var p; //未定义
+        p = 10; //然后再定义变量
+
+        document.write(array_set[3]); //输出数组中的元素
+        document.write(array2[2]);
+        document.write(array3[0]);
+        document.write(array4);
+        document.write(n);
+    </script>
+
+
+</body>
+
+</html>
