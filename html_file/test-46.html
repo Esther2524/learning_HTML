@@ -2,11 +2,12 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>第四十六节:javascript语法</title>
+    <title>第四十六节:javascript语法(一)</title>
 </head>
 
 <body>
     <!-- 点击按钮，呈现结果 -->
+    <!-- 算数运算符 -->
     <p>i=10,j=20,i+j=?</p>
     <p id="sum_id"></p>
     <button onclick="sum_result()">结果</button>
@@ -21,7 +22,7 @@
     </script>
     <br/>
 
-    <!-- 自加 -->
+    <!-- 算数运算符中的自加、自减、自乘、自除 -->
     <p>i=10,自己加自己的结果</p>
     <p id="sum_id2"></p>
     <button onclick="sum2_result()">结果</button>
@@ -43,10 +44,64 @@
         function cal_result(){
             var i = 13;
             var j = 5; 
-            j = i;//把i的值赋给j
+            var m;
+            j = i;//把i的值赋给j,最后输出的j值为13
+            m = i += j;//i+=j表示i = i+j =13+13=26 然后再将26赋值给m
+            // 赋值运算符是从右向左进行运算的
             document.getElementById("cal_id").innerHTML=j;
+            document.getElementById("cal_id").innerHTML=m;
+            document.getElementById("cal_id").innerHTML=i*=j; //这里i=26 j=13 i*=j相当于i = i*j
         }
     </script>
+    <br/>
+
+    <!-- 字符串操作 -->
+    <p>字符串操作</p>
+    <p id="string_id"></p>
+    <button onclick="str_result()">结果</button>
+    <script>
+        function str_result(){
+            var a = "hello";
+            var b = ",world"; 
+            var c = a + b; //最后会输出字符串hello,world，这就是字符串的拼接
+            var d = 5;
+            var e = "6";
+            var f = d + e; //数字与字符串相加会自动转化为字符串，所以输出56
+            document.getElementById("string_id").innerHTML=c;
+            document.getElementById("string_id").innerHTML=f;
+        }
+    </script>
+    <br>
+
+    <!-- 比较运算符，返回布尔值 -->
+    <script>
+        var x1 = 10;
+        var x2 = 10;
+        document.write(x1==x2);//数值相等所以返回true
+        var x3 = 10;
+        var x4 = "10";
+        document.write(x3==x4);//字符串与数值相等，所以返回true
+        var x5 = 10;
+        var x6 = "10";
+        document.write(x5===x6);//此时是较为严格的比较运算，必须满足"类型"也相同
+        var x7 = 20;
+        var x8 = "20";
+        document.write(x7!=x8);//不等于!=,x7是等于x8的，所以返回false
+        var x9 = 30;
+        var x10 = "30";
+        document.write(x9!==x10);//较为严格的不等于
+    </script>
+    <br/>
+
+    <!-- 逻辑运算符 -->
+    <script>
+        var y1 = 10;
+        var y2 = 101;
+        document.write(y1>100&&y2>100);// $$表示“与”，两者都满足才能返回true
+        document.write(y1>100||y2>100);//||表示“或”，两者满足其一就能返回true
+        document.write(!(y1==y2));//!表示“取反”
+    </script>
+
 
 </body>
 

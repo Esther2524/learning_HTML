@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第四十七节:javascript语法(二)</title>
+</head>
+
+<body>
+    <!-- 条件语句if...else -->
+    <script>
+        var i = 10;
+        if(i >= 20){
+            document.write("i大于20");
+        }
+        else{
+            document.write("i小于20");
+        }
+
+        // 多重嵌套
+        var j = 9;
+        if(j>=10){
+            document.write("j大于等于10");
+        }
+        else if(j<=8){
+            document.write("j小于等于8");
+        }
+        else{
+            document.write("j等于9");
+        }
+    </script>
+    <br/>
+
+    <!-- switch条件语句 -->
+    <script>
+        var x = 5;
+        switch(x){
+            // case的个数没有限制
+            case 1://如果x等于1
+                document.write("x is equal to 1");//满足条件就执行的内容
+                break;//判断完成之后跳出此条件语句
+            case 5://如果x等于5
+                document.write("x is equal to 5");
+                break;
+            default://不满足任何一个case的时候
+                document.write("不满足任何一个条件")
+                break;
+        }
+    </script>
+
+    <!-- for循环语句 -->
+    <script>
+        // 利用for循环依次输出数组的元素
+        var y = [1,2,3,4,5];
+        for(var i=0; i<5 ; i++){
+            document.write(y[i]+" ");//用空格隔开
+        }
+        // for in遍历循环
+        var z = [1,2,3,4,5,6];
+        var i;
+        for(i in z){
+            document.write(z[i]);
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
