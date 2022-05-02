@@ -60,7 +60,49 @@
         for(i in z){
             document.write(z[i]);
         }
+    </script>
+    <br/>
 
+    <!-- while循环语句 -->
+    <script>
+        var t = 1;
+        while(t<10){ //括号里面的内容为true的时候执行下列操作
+            //先判断t是否小于10，再执行中括号里面的内容
+            document.write("t="+t+"<br/>");
+            t++;
+        }
+    </script>
+
+    <!-- do...while循环语句 -->
+    <script>
+        var s = 1;
+        do{
+            //先执行，再判断
+            document.write("s="+s+"<br/>");
+            s++;
+        } 
+        while(s<10){
+        }
+    </script>
+
+    <!-- break跳转语句 -->
+    <script>
+        for(var i=0;i<10;i++){
+            if(i==5){
+                // i等于5的时候跳出整个for循环，所以只能print到4
+                break;
+            }
+            document.write("i="+i+"<br>");
+        }
+
+        for(var j=0;j<10;j++){
+            if(j==5){
+                //i等于5的时候结束本次循环，但是整个for循环继续进行
+                continue;
+            }
+            //所以最后的输出里面唯独没有5
+            document.write("j="+j+"<br>");
+        }
     </script>
 
 
