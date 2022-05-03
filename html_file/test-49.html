@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第四十九节:javascript函数(二)</title>
+</head>
+
+<body>
+    <!-- 用p标签呈现内容 -->
+    <p id="compare_p"></p>
+
+
+    <script>
+        //带参数的函数
+        function sum_cal(a,b){
+            var sum = a+b;
+            return sum;
+        }
+        var x1 = sum_cal(15,20);
+        alert(x1); // alert是弹出对话框
+
+        //字符串的带参数函数
+        function sum_str(name,age){
+            alert("My name is " + name + ",and my age is " + age);
+        }
+        sum_str("Anna",20);
+
+        //有返回值的函数
+        function fuc_return(){
+            return "hello"; //函数内部在return的后面不能跟语句，因为不会执行
+        }
+        //把返回值赋给变量
+        var x = fuc_return();
+        var y = fuc_return() + ", world";
+        alert(x);
+        alert(y);
+
+        function compare(s,t){
+            if(s>t){
+                return "s更大";
+            }
+            else{
+                return "t更大";
+            }
+        }
+        document.getElementById("compare_p").innerHTML = compare(14,17);
+    </script>
+    
+    <!-- 通过创建button调用函数 -->
+    <button onclick="sum_str('Jack',28)">按钮</button>
+
+
+</body>
+
+</html>

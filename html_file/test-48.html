@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第四十八节:javascript函数(一)</title>
+</head>
+
+<body>
+    <script>
+        //带参数的函数
+        function sum_cal(a,b){
+            var sum = a+b;
+            return sum;
+        }
+        var x1 = sum_cal(15,20);
+        alert(x1); // alert是弹出对话框
+
+        // 没有参数的函数
+        function sum_demo(){
+            var x=10;
+            var y=40;
+            var sum = x+y;
+            alert(sum);
+        }
+        //调用函数，函数在定义好之后不能自动执行，必须调用
+        //这是第一种调用方法，在script里面调用
+        sum_demo();
+
+        //第二种调用函数的方法，在html中调用
+        function sum_arrange(){
+            var s = 5;
+            var t = 17;
+            var st = s*t;
+            alert(st);
+        }
+    </script>
+
+    <!-- 创建一个按钮 -->
+    <form>
+        <input type="button" value="按钮1" onclick="sum_arrange()">
+    </form>
+
+    <!-- 或者直接创建按钮 -->
+    <button onclick="sum_arrange()">按钮2</button>
+
+</body>
+
+</html>
