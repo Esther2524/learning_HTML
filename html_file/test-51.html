@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第五十一节:javascript异常捕获</title>
+</head>
+
+<body>
+    <script>
+        //使用try catch语句来捕获异常，try里面写发生错误的语句
+        function demo(){
+            try{
+                alert(x);
+            }
+            catch(err){
+                alert(err)
+            }
+        }
+        demo();
+
+    //通过使用throw    
+    </script>
+    <form>
+        <input id="txt" type="text">
+        <input id="button" type="button" onclick="test()" value="按钮">
+    </form>
+    <script>
+        function test(){
+            try{
+                var x = document.getElementById("txt").value;
+                if(x == ""){
+                    throw "请输入内容";
+                }
+            }
+            catch(err){
+                alert(err);
+            }
+         }
+    </script>
+
+</body>
+
+</html>

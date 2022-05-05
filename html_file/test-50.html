@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第五十节:javascript变量</title>
+</head>
+
+<body>
+    <script>
+        var x = 10;//全局变量，它在函数外面，并且在任何地方都能使用
+        m = 2; //全局变量
+        function demo(){
+            var y = 3; //局部变量，只能在函数内部使用。在函数外面不能使用
+            z = 7; //当demo调用之后，它才是全局变量，任何地方都能使用（可能是因为不是由var生成的？
+        }
+        demo();
+        //测试一下
+        alert(x);
+        alert(m);
+        alert(z);
+        alert(y);//如果想要弹出y的话，应该在函数内部alert(y)
+    </script>
+
+</body>
+
+</html>
