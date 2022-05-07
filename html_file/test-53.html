@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第五十三节:javascript DOM对象</title>
+</head>
+
+<body>
+    <!-- 1.改变html输出流 -->
+    <!-- 当网页被加载的时候，浏览器会创建页面的文档对象模型 Document Object Model -->
+    <!-- 千万不要在文档加载完成之后使用document.write() 这会覆盖前面所有的内容 -->
+
+    <!-- 这个是同时加载，所以没问题 -->
+    <p>hello, world</p>
+    <script>
+        document.write("sunny day");
+    </script>
+
+    <!-- 一旦点击了按钮，所有内容都会被清空，只留下最后的内容 -->
+    <p>many many many words and sentences</p>
+    <button onclick="test()">按钮</button>
+    <script>
+        function test(){
+            document.write("rainy day");
+        }
+    </script>
+
+
+    <!-- 2.通过id找到html元素  -->
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第五十二节:javascript事件</title>
+    <link rel="stylesheet" type="text/css" href="test-52.css">
+</head>
+
+<body onload="test7()">
+    <!-- onclick:是单击事件 -->
+    <button onclick="test1()">按钮</button>
+    <script>
+        function test1(){
+            alert("hello");
+        }
+    </script>
+    <br/><br/><br/>
+ 
+
+    <!-- onmouse:鼠标经过和移出事件 -->
+    <!-- 需要给一个参数this,目的是指向当前函数 -->
+    <div class="div_test" onmouseout="test3(this)" onmouseover="test2(this)"></div>
+    <script>
+        //鼠标在这片区域(onmouseover)的时候，出现Good Morning
+        function test2(x){
+           x.innerHTML = "Good Morning"; //这里的x是局部变量，所以可以在下面的那个函数继续使用
+        }
+        //鼠标移出这个区域(onmouseout)的时候，出现 Good Night
+        function test3(x){
+           x.innerHTML = "Good Night";
+        }
+    </script>
+    <br/><br/><br/>
+
+    
+    <!-- onchange:文本内容改变事件 -->
+    <!-- 需要加入this进行索引 -->
+    <form>
+         <input type="text" onchange="test4(this)">
+    </form>
+    <script>
+         function test4(){
+             alert("内容发生改变了");
+         }
+    </script>
+    <br/><br/><br/>
+
+
+    <!-- onselect:文本框选中事件 -->
+    <!-- 输入一段内容之后选中它，背景颜色会发生改变 -->
+    <form>
+         <input type="text" onselect="test5(this)">
+    </form>
+    <script>
+         function test5(y){
+            y.style.background = "yellow";
+         }
+    </script>
+    <br/><br/><br/>
+
+
+    <!-- onfocus:光标聚集事件 -->
+    <form>
+         <input type="text" onfocus="test6(this)">
+    </form>
+    <script>
+         function test6(z){
+           z.style.background = "blue";
+         }
+    </script> 
+
+    <!-- onload:网页加载事件 -->
+    <!-- 需要在body那里去调用 -->
+    <script>
+         function test7(){
+             alert("内容加载完毕")
+         }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
