@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>第五十三节:javascript DOM对象</title>
+    <title>第五十三节:javascript DOM操作html</title>
 </head>
 
 <body>
@@ -12,13 +12,14 @@
 
     <!-- 这个是同时加载，所以没问题 -->
     <p>hello, world</p>
+    <!-- 在js中更改html元素 -->
     <script>
         document.write("sunny day");
     </script>
 
     <!-- 一旦点击了按钮，所有内容都会被清空，只留下最后的内容 -->
     <p>many many many words and sentences</p>
-    <button onclick="test()">按钮</button>
+    <button onclick="test()">按钮1</button>
     <script>
         function test(){
             document.write("rainy day");
@@ -27,6 +28,51 @@
 
 
     <!-- 2.通过id找到html元素  -->
+    <p id="pid">hello</p>
+    <button onclick="demo1()">按钮2</button>
+    <script>
+        function demo1(){
+            // 根据id获得html元素的内容
+            var x = document.getElementById("pid"); //获得的内容是hello
+            x.innerHTML = "world"; //改变html内容，使其变为world
+        }
+    </script>
+
+    <!-- 3.根据标签tag找到html元素 -->
+    <p>sea</p>
+    <p>sun</p>
+    <button onclick="demo2()">按钮3</button>
+    <script>
+        function demo2(){
+            var y = document.getElementsByTagName("p");
+            document.write(y[0].innerHTML); 
+            //这里最后输出的是一个数组，数组内容是所有p标签的内容
+            //比如要输出第一个p标签的内容“hello, world”,就是y[0],所有p标签的第一个p标签的内容
+            
+        }
+    </script>
+    <br/>
+
+    <!-- 4.修改链接 -->
+    <a id="aid" href="https://www.baidu.com">baidu</a>
+    <button onclick="demo3()">按钮4</button>
+    <script>
+        function demo3(){
+            //修改链接，所以是href
+            document.getElementById("aid").href = "https://www.google.com";
+        }
+    </script>
+    <br/><br/><br/><br/>
+
+    <!-- 5.修改图片 -->
+    <img id="image_id" src="1.jpg">
+    <button onclick="demo4()">按钮5</button>
+    <script>
+        function demo4(){
+            document.getElementById("image_id").src="6.jpg";
+        }
+    </script>
+
 
 
 

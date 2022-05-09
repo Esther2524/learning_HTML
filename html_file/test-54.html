@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第五十四节:javascript DOM操作css</title>
+    <link rel="stylesheet" type="text/css" href="test-54.css">
+</head>
+
+<body>
+    <div id="div_id" class="div_id">
+        all too well
+    </div>
+    <!-- 通过button触发 -->
+    <button onclick="demo1()">按钮1</button>
+    <!-- 在js里面更改css样式 -->
+    <script>
+        function demo1(){
+            //更改css样式的时候用style，后面接要更改的内容
+            document.getElementById("div_id").style.background = "lightblue";
+            //改文字颜色
+            document.getElementById("div_id").style.color = "red";
+        }
+
+    </script>
+
+</body>
+
+</html>

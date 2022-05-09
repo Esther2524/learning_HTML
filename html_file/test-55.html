@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第五十五节:javascript Event Listene监听/句柄</title>
+</head>
+
+<body>
+    <p id="pid">Sunday</p>
+    <!-- js的函数与html中onclick内容必须保持一致，如果有js改变，那么html必须改变，有点麻烦 -->
+    <button onclick="demo()">按钮1</button>
+    <script>
+        function demo(){
+            document.getElementById("pid").innerHTML = "Monday";
+        }
+    </script>
+    <br/><br/>
+
+    <!-- 使用句柄触发一件事 -->
+    <button id="bid">按钮2</button>
+    <script>
+        //括号内第一个是方式，click表示通过点击按钮触发事件；第二个你要做什么，比如这里是我要写一个函数
+        document.getElementById("bid").addEventListener("click",function(){
+            alert("Monday")
+        });
+        //比起上面那种方法，这种方法更加常用。因为id是唯一的，所以id不会发生改变（但是函数名字可能会发生改变）
+        //所以一旦要改变方法，只需要更改js的内容，不需要改html的内容
+    </script>
+    <br/><br/>
+
+    <!-- 多个句柄的添加不会覆盖 -->
+    <button id="bid2">按钮3</button>
+    <script>
+        var x = document.getElementById("bid2");
+        //注意addEventListener里面的函数名不要写括号（不然就会在点按钮之前就弹窗了）
+        x.addEventListener("click",func1);
+        x.addEventListener("click",func2);
+        //如果要移除
+        x.removeEventListener("click",fun1);
+
+        function func1(){
+            alert("apple");
+        }
+        function func2(){
+            alert("banana");
+        }
+
+    </script>
+
+</body>
+
+</html>
