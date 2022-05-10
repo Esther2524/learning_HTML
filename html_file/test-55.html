@@ -35,8 +35,9 @@
         //注意addEventListener里面的函数名不要写括号（不然就会在点按钮之前就弹窗了）
         x.addEventListener("click",func1);
         x.addEventListener("click",func2);
+
         //如果要移除
-        x.removeEventListener("click",fun1);
+        x.removeEventListener("click",func1);
 
         function func1(){
             alert("apple");

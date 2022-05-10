@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第五十六节:javascript事件流和事件处理</title>
+</head>
+
+<body>
+    <div>
+        <!-- 
+            接受事件的的顺序有两种：
+            1）事件冒泡：从最具体的到不具体的。这里最具体的节点是按钮，所以是button -> div -> html
+            2）事件捕获：从最不具体的到最具体的，最具体的节点最后接受事件。所以是html -> div -> button
+         -->
+        <button id="bid">按钮</button>
+    </div>
+    <br/>
+
+    <!-- 例1 -->
+    <div>
+        <button id="bid1" onclick="demo1()">按钮1</button>
+    </div>
+    <script>
+        function demo1(){
+            alert("js DOM0级事件");
+        }
+    </script>
+    <br/>
+
+    <!-- DOM0级事件处理 -->
+    <!-- DOM0级事件处理：把一个函数赋值给一个事件处理程序属性 -->
+    <!-- onclick 不写在button里面，这样如果demo函数发生变化，就不用同时修改两处，而只需要在js里面修改 -->
+    <!-- 缺点是多个事件会被覆盖掉 -->
+    <div>
+        <button id="bid2">按钮2</button>
+    </div>
+    <script>
+        var x = document.getElementById("bid2");
+        x.onclick = function(){alert("js DOM0级事件1")};//会被下面的覆盖掉
+        x.onclick = function(){alert("js DOM0级事件2")};
+        //清除这个0级事件
+        // x.onclick = null;
+    </script>
+    <br/>
+
+    <!-- DOM2级事件处理 -->
+    <!-- 最常用的方法 -->
+    <div>
+        <button id="bid3">按钮3</button>
+    </div>
+    <script>
+        var x = document.getElementById("bid3");
+        x.addEventListener("click",func1);
+        x.addEventListener("click",func2);
+        x.addEventListener("click",func3);
+        //x.addEventListener("click",function(){alert("xxx")});这种写法也可以的，但是不用的原因我猜应该是不方便移除
+        //不能直接remove而是得删掉源码，这样可能造成一点麻烦
+
+        //移除
+        x.removeEventListener("click",func1);
+
+        //不会被覆盖掉，而是依次处理
+        function func1(){
+            alert("js DOM2级事件1");
+        }
+        function func2(){
+            alert("js DOM2级事件2");
+        }
+        function func3(){
+            alert("js DOM2级事件3");
+        }
+        
+    </script>
+    
+
+
+</body>
+
+</html>
