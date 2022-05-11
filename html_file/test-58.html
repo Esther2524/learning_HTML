@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第五十八节:javascript自定义对象</title>
+</head>
+
+<body>
+    <script>
+        //第一种创建对象方法
+        //创建对象
+        user = new Object();
+        //设置对象的属性
+        user.name = "Steve";
+        user.age = "18";
+        //调用
+        document.write("用户名称:" + user.name + "用户年龄:" + user.age);
+
+        //第二种创建对象方法
+        person = {name:"Amy",age:"26"};
+        document.write("用户名称:" + person.name + "用户年龄:" + person.age);
+
+        //第三种创建对象方法：使用函数
+        function func1(name,age){
+            //注意这里不能漏写this
+            this.obj1 = name;
+            this.obj2 = age;
+        }
+        x1 = new func1("Anna","39");
+        //调用
+        document.write("用户名称:" + x1.obj1 + "用户年龄:" + x1.obj2);
+
+    </script>
+
+</body>
+
+</html>

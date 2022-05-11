@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第五十七节:javascript事件对象</title>
+</head>
+
+<body>
+    <button id="bid">按钮1</button>
+    <button id="bid2">按钮2</button>
+    <button id="bid3">按钮3</button>
+
+    <script>
+        document.getElementById("bid").addEventListener("click",func1);
+        document.getElementById("bid2").addEventListener("mouseover",func2);
+
+        //1.获取事件类型 type
+        //获取事件类型，结果是click
+        function func1(event){
+            alert(event.type);
+        }
+        //获取事件类型，是mouseover，鼠标滑过按钮就会出现弹窗
+        function func2(event){
+            alert(event.type);
+        }
+
+
+        //2.获取事件目标 target
+        document.getElementById("bid3").addEventListener("click",func3);
+
+        function func3(event){
+            alert(event.target);
+        }
+        //会显示这是一个button按钮
+
+    </script>
+
+    <!-- 3.事件冒泡及其阻止 stopPropagation -->
+    <div id="divid">
+        <button id="bid4">按钮4</button>
+    </div>
+    <script>
+        document.getElementById("bid4").addEventListener("click",func4)
+        document.getElementById("divid").addEventListener("click",func5);
+
+        function func4(event){
+            alert(event.target);
+            //阻止事件冒泡，也就是div的事件的执行
+            //event.stopPropagation();
+        }
+        function func5(){
+            alert("beautiful");
+        }
+        //如果点击按钮，应该只有button会执行，也就是只有func4会执行
+        //但是点击按钮之后，不仅执行了func4，也执行了func5(button的上一级div)，这就是事件的冒泡
+    </script>
+
+
+    <!-- 4.阻止事件默认行为 preventDefault -->
+    <div id="div_id">
+        <button id="bid5">按钮5</button>
+        <a href="https://www.baidu.com" id="aid">百度</a>
+    </div>
+
+    <script>
+        document.getElementById("bid5").addEventListener("click",func6);
+        document.getElementById("div_id").addEventListener("click",func7);
+        document.getElementById("aid").addEventListener("click",func8);
+        
+        function func6(event){
+            alert(event.target);
+            event.stopPropagation();
+        }
+        function func7(){
+            alert("beautiful");
+        }
+        function func8(){
+            event.stopPropagation();//如果不写这句话，那么点击链接的时候，先会弹窗一个beautiful，然后跳转百度
+            event.preventDefault();//阻止事件默认行为，也就是阻止链接跳转
+            
+        }
+    </script>
+
+
+
+</body>
+
+</html>

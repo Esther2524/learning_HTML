@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第五十九节:javascript内置对象</title>
+</head>
+
+<body>
+    <p>一、字符串</p>
+    <script>
+        //1.定义字符串
+        var str = "dancing around the kitchen in the refridgerator light";
+
+        //字符串长度:length
+        document.write(str.length);
+
+        //2.查询字符串中是否存在某个字符串，如果存在返回字母所在位置，如果不存在返回-1:indexOf
+        //注意是从0开始计算位置,空格也占位置
+        document.write(str.indexOf("dancing"));
+        document.write(str.indexOf("around"));
+        document.write(str.indexOf("banana"));
+
+        //3.匹配内容match，如果有该字符串，就打印出来；没有返回空
+        document.write(str.match("kitchen"));
+        document.write(str.match("these"));
+
+        //4.替换内容replace,第一个参数是原文参数，第二个是要最终显示的参数
+        document.write(str.replace("the","my"));
+
+        //5.字符串大小写转换:toUpperCase/toLowerCase
+        document.write(str.toUpperCase());
+      
+        //6.字符串转换为数组:split
+        var str2 = "apple,banana,peach";
+        //split里面的参数是分割的依据,可以是逗号，也可以是空格等等
+        var s = str2.split(",");
+        document.write(s);
+        document.write(s[0]);
+    </script>
+    <br/>
+
+    <p>二、日期</p>
+    <script>
+        //1.获得当前日期
+        var date1 = new Date();
+        document.write(date1);
+
+        //2.获得年份:getFullYear
+        document.write(date1.getFullYear());
+        //3.获得毫秒
+        document.write(date1.getTime());
+        //4.自己设置
+        //三个参数分别是年、月、日
+        date1.setFullYear()
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
