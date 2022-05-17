@@ -5,7 +5,7 @@
     <title>第五十九节:javascript内置对象</title>
 </head>
 
-<body>
+<body onload="startTime()">
     <p>一、字符串</p>
     <script>
         //1.定义字符串
@@ -39,6 +39,8 @@
     </script>
     <br/>
 
+
+
     <p>二、日期</p>
     <script>
         //1.获得当前日期
@@ -50,12 +52,43 @@
         //3.获得毫秒
         document.write(date1.getTime());
         //4.自己设置
-        //三个参数分别是年、月、日
-        date1.setFullYear()
+        //三个参数分别是年、月、日，注意这里的月份是从0开始，也就是说一月份的话，应该是0
+        date1.setFullYear(2022,0,6);
+        document.write(date1);
+    </script>
+    <br/>
+
+
+
+    <p>三、时钟</p>
+    <p>这里实现了一个随时刷新的时钟</p>
+    <script>
+        function startTime(){
+            var today = new Date();
+            var hr = today.getHours();
+            var min = today.getMinutes();
+            var s = today.getSeconds();
+            min = checkTime(min);
+            s = checkTime(s);
+            document.getElementById("time_id").innerHTML = hr+":"+min+":"+s;
+            //创建方法，自己调用自己，目的是不断刷新时间
+            //setTimeout: setTimeout(要执行的代码，等待的毫秒数) 然后在body中使用onload调用函数startTime()
+            x = setTimeout(
+                function(){
+                    startTime();
+                },1000);
+        }
+        // 为了格式更好看，如果输出的是个位数，就在前面加个0
+        function checkTime(i){
+            if(i<10){
+                i = "0"+i;
+            }
+            return i;
+        }  
+
     </script>
 
-
-
+    <div id="time_id"></div>
 
 
 
