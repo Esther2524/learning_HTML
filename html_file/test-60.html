@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第六十节:javascript数组对象和math对象</title>
+</head>
+
+<body>
+    <p>一、Array数组对象</p>
+    <script>
+        //1.数组合并 concat()
+        var a = ["admit","waitlist","reject"];
+        var b = ["college","university"];
+        //a与b进行合并
+        var c = a.concat(b);
+        document.write(c);
+
+        //2.排序 sort()
+        var d = ["a","f","c","e","g"];
+        document.write(d.sort());
+
+        //3.倒序
+        var e = ["3","1","5","4","2"];
+        document.write(e.sort(function(x,y){
+            return y-x;
+        }))
+
+        //4.追加数组元素
+        var f = ["apple","banana","peach"];
+        f.push("coconut");
+        document.write(f);
+
+        //5.翻转
+        var g = ["a","c","b"];
+        g.reverse();
+        document.write(g);
+    </script>
+    <br/>
+
+    <p>二、Math对象</p>
+    <script>
+        //1.四舍五入
+        document.write(Math.round(3.5));
+        //2.取随机数，默认从0到1
+        document.write(Math.random());
+        document.write(" "+Math.random()*10); //从0到10的随机数
+        document.write(" " + parseInt(Math.random()*10));//取整数用 parseInt()
+        //3.最大值max 最小值min
+        document.write(Math.max(10,70,36,2,9));
+        //4.绝对值 abs
+        document.write(Math.abs(-10));
+    </script>
+
+</body>
+
+</html>

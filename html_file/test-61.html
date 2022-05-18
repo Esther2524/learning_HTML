@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第六十一节:jsdom对象控制html元素</title>
+</head>
+
+<body>
+    <p>一、通过name元素在js中修改html元素</p>
+    <!-- name可以不唯一 -->
+    <p name="test_name">happy cake day!</p>
+    <p name="test_name">happy cake day!</p>
+    <p name="test_name">happy cake day!</p>
+    <p name="test_name">happy cake day!</p>
+
+    <script>
+        function func1(){
+            var x = document.getElementsByName("test_name");
+            //测试name为test_name的元素是否唯一,不唯一的话那么x可以看作一个数组
+            // alert(x.length);
+            var y = x[0];//选择要修改的元素
+            //innerHTML就是在js改变html的内容
+            y.innerHTML = "all too well";
+        }
+        func1();
+    </script>
+
+    <p>二、通过标签在js中修改html内容</p>
+    <script>
+        function func2(){
+            var x = document.getElementsByTagName("p"); //所有p标签的内容成为数组
+            var y = x[3];//注意p元素的第一个是那段中文
+            y.innerHTML = "hello";
+        }
+        func2();
+    </script>
+
+    
+    <p>三、获得标签的属性 getAttribute</p>
+    <a id="a_id" title="不要点我" href="https://www.google.com">Google</a>
+ 
+    <script>
+        function func3(){
+            var a = document.getElementById("a_id");
+            var b = a.getAttribute("title");//获得title属性的内容
+            var c = a.getAttribute("id");//获得id
+            alert(b);
+            alert(c);
+        }
+        func3();
+    </script>
+
+    <p>四、设置标签的属性 setAttribute</p>
+    <a id="a_id2">douban</a>
+    <script>
+        function func4(){
+            var x = document.getElementById("a_id2");
+            //设置属性的时候，第一个是属性名，第二个是具体内容
+            x.setAttribute("casualSet","动态设置")
+            //测试是否设置成功
+            var y = x.getAttribute("casualSet");
+            alert(y);
+        }
+        func4();
+    </script>
+
+    <p>五、访问子节点 childNotes</p>
+    <p>body是个节点,p标签也是节点,那么p标签相对于body就是子节点</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        function func5(){
+            var z = document.getElementsByTagName("ul")[0].childNodes;
+            
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
