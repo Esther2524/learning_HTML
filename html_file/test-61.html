@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>第六十一节:jsdom对象控制html元素</title>
+    <title>第六十一节:jsdom对象控制html元素(一)</title>
 </head>
 
 <body>
@@ -66,16 +66,15 @@
 
     <p>五、访问子节点 childNotes</p>
     <p>body是个节点,p标签也是节点,那么p标签相对于body就是子节点</p>
-    <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-    </ul>
+    <ul><li>32</li><li>24</li><li>73</li></ul>
+    <ul><li>s</li><li>t</li></ul>
     <script>
         function func5(){
-            var z = document.getElementsByTagName("ul")[0].childNodes;
-            
+            var z = document.getElementsByTagName("ul")[0].childNodes;//[0]指第一个ul
+            alert(z.length);//计算length会计算空白项，所以为了真实反映，应该删除空白项
+            alert(z[0].nodeType);//nodeType返回值为1说明是元素节点
         }
+        func5();
     </script>
 
 
