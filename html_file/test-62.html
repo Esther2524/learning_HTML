@@ -51,7 +51,6 @@
 
     <p>四、删除节点:removeChild</p>
     <div id="div_id3"><p>the moment I knew</p><p>gorgeous</p><p>back to December</p></div>
-
     <script>
         function func4(){
             var x = document.getElementById("div_id3");//获得div节点
@@ -61,6 +60,19 @@
         }
         func4();
     </script>
+
+    <p>五、获得网页高度和宽度</p>
+    <script>
+        function func5(){
+            var w = document.documentElement.offsetWidth;//获得宽度
+            var h = document.documentElement.offsetHeight;//获得高度
+            alert("width="+w+" "+"height"+h);
+        }
+        func5();
+    </script>
+
+
+
     
 </body>
 

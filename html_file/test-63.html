@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第六十三节:windows对象</title>
+</head>
+
+<body>
+    <p>一、window尺寸:获得宽和高(不包括导航栏)</p>
+    <script>
+        document.write("高度是"+window.innerHeight+"宽度是"+window.innerWidth);
+    </script>
+
+    <p>二、window:打开新的页面</p>
+    <button id="btn" onclick="func1()">按钮</button>
+    <script>
+        function func1(){
+            //window.open里面有三个参数，第一个是打开后的页面的html，第二个是页面名称，第三个是打开的页面的样式
+            window.open("example.html","name","height=200,width=200,top=100,left=100");//点击按钮之后，会打开test-03内容的页面
+            //关闭窗口
+            //window.close();
+        }
+        //注意这里如果想有弹窗效果，必须把网页切成小窗模式...why?
+    </script>
+</body>
+
+</html>
