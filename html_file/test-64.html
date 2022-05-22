@@ -6,6 +6,68 @@
 </head>
 
 <body>
+    <p>一、计时方法:setInterval</p>
+    <p id="p_time"></p>
+    <button id="btn" onclick="func2()">停止刷新时间</button>
+    <script>
+
+        //setInterval的两个参数：方法，时间
+        var getTime = setInterval(function(){
+            func1();//每隔1s执行func1()函数，这样就相当于刷新
+        },1000);
+
+        //func1函数就是在获得当前时间
+        function func1(){
+            var x = new Date;//x获得了当前时间
+            var y = x.toLocaleTimeString();//把时间转换为字符串
+            document.getElementById("p_time").innerHTML = y;//让html中的p元素为y
+        }
+
+        //停止setInterval方法:clearInterval
+        function func2(){
+            clearInterval(getTime);
+        }
+    </script>
+
+
+    <p>二、计时方法:setTimeout</p>
+    <button id="btn2" onclick="func2()">弹出窗口</button>
+    <script>
+        var getTime2;
+        function func2(){
+            getTime2 = setTimeout(function(){
+                alert("hello")//指的是点击按钮后，3秒之后弹窗
+            },3000);
+        }
+    </script>
+    
+
+    <p>三、利用setTimeout实现连续弹窗</p>
+    <button onclick="func3()">连续弹窗</button>
+    <button onclick="func4()">停止弹窗</button>
+    <script>
+        var getTime3;
+        function func3(){
+            alert("last kiss");
+            getTime3 = setTimeout(function(){
+                func3()//在func3里面调用func3，那么就会每隔3秒弹出一个窗口
+            },3000);
+        } 
+        //停止弹窗
+        function func4(){
+            clearTimeout(getTime3);
+        }
+    
+    </script>
+
+
+
+
+
+
+
+
+ 
 
 </body>
 
