@@ -16,7 +16,7 @@
             func1();//每隔1s执行func1()函数，这样就相当于刷新
         },1000);
 
-        //func1函数就是在获得当前时间
+        //定义func1(),func1函数就是在获得当前时间
         function func1(){
             var x = new Date;//x获得了当前时间
             var y = x.toLocaleTimeString();//把时间转换为字符串
@@ -40,7 +40,7 @@
             },3000);
         }
     </script>
-    
+
 
     <p>三、利用setTimeout实现连续弹窗</p>
     <button onclick="func3()">连续弹窗</button>
