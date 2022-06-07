@@ -16,17 +16,32 @@
         }
     </script>
 
-    <p>二.history.forward()的使用</p>
-  
 
-    <p>三.history.</p>
+    <p>二.history.forward()的使用</p>
+    <!-- 见65xx文件 -->
+
+
+    <p>三.history.go()的使用</p>
     <form>
-        
+        <input type="text" id="username">
     </form>
+    <button id="btn3" onclick="func3()">确认</button>
+
+    <script>
+        //实现的效果是，如果用户名输入正确才能跳回原来的页面，也就是65xx的页面
+        function func3(){
+            var x = document.getElementById("username").value;//获得输入的内容
+            if(x=="Esther"){
+                history.go(-1);//history.go(-1)相当于history.back 返回之前的页面
+            }
+            else{
+                alert("用户名输入错误");
+            }
+        
+        }
+    </script>
      
     
-
-
 </body>
 
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第六十六节:location对象和screen对象</title>
+</head>
+
+<body>
+    <p>一.hostname 返回web主机的域名</p>
+    <button id="btn" onclick="func1()">按钮1</button>
+    <p id="pid">随便写的</p>
+
+    <script>
+        function func1(){
+            // var x = window.location.hostname;
+            // document.getElementById("pid").innerHTML = x;
+            document.getElementById("pid").innerHTML = window.location.hostname;
+            //这里不知道为啥我返回的是空，不过页面的/users前面本来就是空
+        }
+    </script>
+    
+
+    <p>二.pathname 返回当前页面的路径和文件名</p>
+    <button onclick="func2()">按钮2</button>
+    <p id="pid2"></p>
+    <script>
+        function func2(){
+            var x = window.location.pathname;
+            document.getElementById("pid2").innerHTML = x;
+        }
+    </script>
+
+    
+    <p>三.port 返回web主机的端口</p>
+    <button onclick="func3()">按钮3</button>
+    <p id="pid3"></p>
+    <script>
+        function func3(){
+            var x = window.location.port;
+            document.getElementById("pid3").innerHTML = x;
+            //这里也是返回为空
+        }
+    </script>
+
+    <p>四.href 返回当前页面的url</p>
+    <button onclick="func4()">按钮4</button>
+    <p id="pid4"></p>
+    <script>
+        function func4(){
+            var x = window.location.href;
+            document.getElementById("pid4").innerHTML = x;
+            //这里也是返回为空
+        }
+    </script>
+
+    
+    <p>五.assign 加载新的页面</p>
+    <button onclick="func5()">按钮5</button>
+    <p id="pid5"></p>
+    <script>
+        function func5(){
+            location.assign("http://www.baidu.com");
+        }
+    </script>
+
+
+    <p>六.screen属性 对象包含有关用户的屏幕</p>
+    <button onclick="func1()">按钮1</button>
+    <script>
+        function func1(){
+            document.write("可用高度:"+screen.availHeight+" "+"可用宽度"+screen.availWidth);
+            document.write("高度:"+screen.height+" "+"宽度"+screen.width);
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
