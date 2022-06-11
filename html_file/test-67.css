@@ -1,0 +1,32 @@
+/* 全局设置 */
+*{
+    
+    margin: 0;
+    padding: 0;
+}
+
+/* #后面接id名 */
+#container{
+    position: relative;
+}
+
+/* .后面接class */
+.box{
+    /* 每张图片自带5px的边距，也就是两张图片的间距是10px */
+    padding: 5px;
+    float: left;
+}
+
+.box_img{
+    padding: 5px;
+    /* 设置边框宽度及颜色 */
+    border: 1px solid rgb(32, 104, 221);
+    /* 设置边框圆角 */
+    border-radius: 5px;
+}
+
+/* 设置图片的大小 */
+.box_img img{
+    width: 500px;
+    height: auto;
+}
