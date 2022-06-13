@@ -20,13 +20,14 @@
 .box_img{
     padding: 5px;
     /* 设置边框宽度及颜色 */
-    border: 1px solid rgb(32, 104, 221);
+    border: 1px solid rgb(225, 153, 76);
+    box-shadow: 0 0 5px rgb(208, 33, 33);
     /* 设置边框圆角 */
     border-radius: 5px;
 }
 
 /* 设置图片的大小 */
 .box_img img{
-    width: 500px;
+    width: 200px;
     height: auto;
 }
